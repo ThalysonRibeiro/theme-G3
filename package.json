@@ -1,0 +1,32 @@
+{
+  "name": "themeg3",
+  "displayName": "Theme-G3",
+  "description": "Thme for vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+   "icon": "icon.png",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/ThalysonRibeiro/theme-G3"
+  },
+    "keywords": [
+    "dark",
+    "theme",
+    "purple"
+  ],
+  "publisher": "Rafinha-g3",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Theme G3",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme-g3-color-theme.json"
+      }
+    ]
+  }
+}
