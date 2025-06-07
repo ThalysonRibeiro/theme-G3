@@ -2,7 +2,7 @@
   "name": "themeg3",
   "displayName": "Theme-G3",
   "description": "Thme for vscode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.97.0"
   },
