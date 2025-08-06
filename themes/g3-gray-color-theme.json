@@ -1,5 +1,6 @@
 {
-	"name": "theme-G3",
+	"name": "G3 Gray",
+	"type": "dark",
 	"colors": {
 		// Distintivo
 		"badge.foreground": "#ffffff",
@@ -46,12 +47,12 @@
 		// fim Barra Lateral
 		
 		// Minimapa
-		"minimap.findMatchHighlight": "#8338ec",
-		"minimap.selectionHighlight": "#FF0073",
+		// "minimap.findMatchHighlight": "#8338ec",
+		// "minimap.selectionHighlight": "#FF0073",
 		"minimap.errorHighlight": "#FB5607",
 		"minimap.warningHighlight": "#3A86FF", //cor dos avisos
 		"minimap.background": "#44475a42",
-		"minimap.selectionOccurrenceHighlight": "#7209B7",
+		// "minimap.selectionOccurrenceHighlight": "#7209B7",
 		"minimap.foregroundOpacity": "#000000c0",
 		"minimapSlider.background": "#ff007381",
 		"minimapSlider.hoverBackground": "#7109b794",
