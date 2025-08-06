@@ -2,9 +2,9 @@
   "name": "themeg3",
   "displayName": "Theme-G3",
   "description": "Thme for vscode",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.102.3"
   },
   "categories": [
     "Themes"
@@ -23,9 +23,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Theme G3",
+        "label": "G3 Gray",
         "uiTheme": "vs-dark",
-        "path": "./themes/theme-g3-color-theme.json"
+        "path": "./themes/g3-gray-color-theme.json"
+      },
+      {
+        "label": "G3 zinc",
+        "uiTheme": "vs-dark",
+        "path": "./themes/g3-zinc-color-theme.json"
       }
     ]
   }
