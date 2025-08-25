@@ -70,10 +70,10 @@ This is the final step that triggers the automated publishing pipeline.
     Create a new Git tag that **matches the version in `package.json`**. Pushing this tag to GitHub will automatically start the release workflow.
     ```bash
     # Create the tag (e.g., v0.0.6)
-    git tag v0.0.8
+    git tag v0.0.9
 
     # Push the tag to GitHub
-    git push origin v0.0.8
+    git push origin v0.0.9
     ```
 
 ## Step 5: Verify the Release
