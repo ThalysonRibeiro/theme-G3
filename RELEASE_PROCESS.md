@@ -1,72 +1,82 @@
-# Release Process
+# Release Workflow (Git Flow)
 
-This document outlines the steps to publish a new version of the G3 Theme Pack. The process is automated using GitHub Actions.
+This document outlines the complete step-by-step process for releasing a new version of the G3 Theme Pack. This workflow uses a `develop` branch for new work and a `main` branch for stable, production-ready code.
 
-## Prerequisites
+## Step 1: Development on the `develop` Branch
 
-- Ensure you have committed all your code changes to the `develop` branch.
-- Ensure the `VSCE_PAT` secret is correctly configured in the repository's Actions secrets.
-
-## Step-by-Step Guide
-
-### 1. Update Version Number
-
-Open `package.json` and increment the `version` field. For example, change `"version": "0.0.4"` to `"version": "0.0.5"`.
-
-### 2. Update Changelog
-
-Open `CHANGELOG.md` and add a new entry for the version you are about to release. Follow the existing format.
-
-```markdown
-## [0.0.5] - YYYY-MM-DD
-
-### Added
-
-- New feature description.
-
-### Changed
-
-- Description of a change.
-
-### Fixed
-
-- Description of a bug fix.
-```
-
-### 3. Commit the Changes
-
-Stage and commit the updated `package.json` and `CHANGELOG.md` files.
+All new features, bug fixes, and changes should be committed to the `develop` branch.
 
 ```bash
-git add package.json CHANGELOG.md
-git commit -m "chore: Prepare release v0.0.5"
+# Make sure you are on the develop branch
+git checkout develop
+
+# Do your work...
+git add .
+git commit -m "feat: Add a new feature"
 ```
 
-### 4. Push the Commit
+## Step 2: Prepare for Release
 
-Push the commit to your main branch on GitHub.
+When you are ready to release a new version, perform these preparation steps on the `develop` branch.
 
-```bash
-git push origin develop
-```
+1.  **Update Version Number:**
+    Open `package.json` and increment the `version` field (e.g., from `"0.0.5"` to `"0.0.6"`).
 
-### 5. Create and Push the Git Tag
+2.  **Update Changelog:**
+    Open `CHANGELOG.md` and add a new entry for the version you are about to release. Follow the existing format.
 
-This is the step that triggers the automated release pipeline. Create a new Git tag that matches the version in `package.json` and push it to the repository.
+3.  **Commit the Preparation:**
+    Stage and commit the updated files.
+    ```bash
+    git add package.json CHANGELOG.md
+    git commit -m "chore: Prepare release v0.0.6"
+    ```
 
-```bash
-# Create the tag
-git tag v0.0.5
+4.  **Push to `develop`:**
+    Push all your changes to the remote `develop` branch.
+    ```bash
+    git push origin develop
+    ```
 
-# Push the tag to GitHub
-git push origin v0.0.5
-```
+## Step 3: Merge `develop` into `main` via Pull Request
 
-### 6. Verify the Release
+1.  **Open a Pull Request (PR):**
+    - Go to your repository on GitHub.
+    - Click on the "Pull requests" tab.
+    - Click "New pull request".
+    - Set the base branch to `main` and the compare branch to `develop`.
+    - Review the changes and click "Create pull request".
 
-Once you push the tag, the GitHub Actions pipeline will start automatically.
+2.  **Merge the Pull Request:**
+    - After reviewing (and getting approval, if you have collaborators), click "Merge pull request".
+    - This officially brings all your new features into the stable `main` branch.
 
-- You can monitor its progress in the **Actions** tab of the repository.
-- If it succeeds:
-  - A new release will be created in the **Releases** section of the repository, with the `.vsix` file attached.
-  - The new version will be published to the VS Code Marketplace.
+## Step 4: Tag and Publish from `main`
+
+This is the final step that triggers the automated publishing pipeline.
+
+1.  **Switch to the `main` branch locally:**
+    ```bash
+    git checkout main
+    ```
+
+2.  **Pull the latest changes:**
+    This ensures your local `main` branch has the merge commit from the pull request.
+    ```bash
+    git pull origin main
+    ```
+
+3.  **Create and Push the Git Tag:**
+    Create a new Git tag that **matches the version in `package.json`**. Pushing this tag to GitHub will automatically start the release workflow.
+    ```bash
+    # Create the tag (e.g., v0.0.6)
+    git tag v0.0.6
+
+    # Push the tag to GitHub
+    git push origin v0.0.6
+    ```
+
+## Step 5: Verify the Release
+
+- Go to the **Actions** tab in your GitHub repository to monitor the pipeline's progress.
+- Once it succeeds, a new release will be created in the **Releases** section, and the new version will be published to the VS Code Marketplace.

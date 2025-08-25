@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.5] - 2025-08-25
+
+### Changed
+
+- Updated the `sideBar.background` color in the G3 Zinc theme for better contrast.
+- Commented out the `activityBar.border` in the G3 Zinc theme.
+
 ## [0.0.4] - 2025-08-06
 
 ### Changed
