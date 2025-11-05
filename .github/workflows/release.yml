@@ -26,6 +26,9 @@ jobs:
       - name: Package extension
         run: vsce package
 
+      - name: List files
+        run: ls -R
+
       - name: Publish to VS Code Marketplace
         run: vsce publish -p ${{ secrets.VSCE_PAT }}
 
