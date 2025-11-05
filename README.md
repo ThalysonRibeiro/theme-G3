@@ -6,6 +6,7 @@ This extension provides a collection of custom themes for Visual Studio Code, de
 
 *   **G3 Gray:** A dark theme with a neutral gray background and a vibrant color palette for syntax highlighting.
 *   **G3 Zinc:** A dark theme with a cool, zinc-toned background and a carefully selected set of colors for a comfortable coding experience.
+*   **G3 Dark purple:** A dark theme with a purple-toned background.
 
 ## Installation
 

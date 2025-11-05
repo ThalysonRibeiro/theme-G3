@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2025-11-05
+
+### Added
+
+- Added a new theme: G3 Dark Purple.
+
+### Changed
+
+- Removed comments from all theme files.
+
 ## [0.0.6] - 2025-08-25
 
 ## [0.0.5] - 2025-08-25
