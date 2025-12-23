@@ -2,7 +2,7 @@
   "name": "themeg3",
   "displayName": "Theme-G3",
   "description": "Thme for vscode",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.102.3"
   },
@@ -36,6 +36,11 @@
         "label": "G3 Dark purple",
         "uiTheme": "vs-dark",
         "path": "./themes/g3-dark-purple-collor-theme.json"
+      },
+      {
+        "label": "G3 Sakura Light",
+        "uiTheme": "vs",
+        "path": "./themes/sakura-light-color-theme.json"
       }
     ]
   }
