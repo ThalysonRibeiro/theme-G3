@@ -1,6 +1,6 @@
 # Release Workflow (Git Flow)
 
-This document outlines the complete step-by-step process for releasing a new version of the G3 Theme Pack. This workflow uses a `develop` branch for new work and a `main` branch for stable, production-ready code.
+This document outlines the complete step-by-step process for releasing a new version of the Vexiun Theme. This workflow uses a `develop` branch for new work and a `main` branch for stable, production-ready code.
 
 ## Step 1: Development on the `develop` Branch
 

@@ -2,6 +2,35 @@
 
 Paleta e temas de cores do VS Code baseados nas cores do projeto.
 
+## Temas
+
+### Gray
+![Gray Theme](./public/gray.png)
+
+### Zinc
+![Zinc Theme](./public/zinc.png)
+
+### Dark Purple
+![Dark Purple Theme](./public/dark-purple.png)
+
+### Sakura Light
+![Sakura Light Theme](./public/sakura.png)
+
+### Strawberry Dark
+![Strawberry Dark Theme](./public/strawberry.png)
+
+### Black and White
+![Black and White Theme](./public/black-end-white.png)
+
+### White and Black
+![White and Black Theme](./public/white-and-black.png)
+
+### Vexiun Dark
+(Imagem ainda não disponível)
+
+### Vexiun Light
+(Imagem ainda não disponível)
+
 ## Paleta Base
 
 ### Light
