@@ -1,21 +1,44 @@
-# G3 Theme Pack for Visual Studio Code
+# Vexiun Theme Pack for Visual Studio Code
 
-This extension provides a collection of custom themes for Visual Studio Code, designed to be easy on the eyes while providing clear syntax highlighting.
+This extension provides a collection of custom themes for Visual Studio Code.
 
 ## Available Themes
 
-*   **G3 Gray:** A dark theme with a neutral gray background and a vibrant color palette for syntax highlighting.
-*   **G3 Zinc:** A dark theme with a cool, zinc-toned background and a carefully selected set of colors for a comfortable coding experience.
-*   **G3 Dark purple:** A dark theme with a purple-toned background.
+### Gray
+![Gray Theme](./public/gray.png)
+
+### Zinc
+![Zinc Theme](./public/zinc.png)
+
+### Dark Purple
+![Dark Purple Theme](./public/dark-purple.png)
+
+### Sakura Light
+![Sakura Light Theme](./public/sakura.png)
+
+### Strawberry Dark
+![Strawberry Dark Theme](./public/strawberry.png)
+
+### Black and White
+![Black and White Theme](./public/black-end-white.png)
+
+### White and Black
+![White and Black Theme](./public/white-and-black.png)
+
+### Vexiun Dark
+(Image not available yet)
+
+### Vexiun Light
+(Image not available yet)
 
 ## Installation
 
 1.  Open the **Extensions** sidebar in VS Code.
-2.  Search for `G3 Theme Pack`.
+2.  Search for `Vexiun Theme`.
 3.  Click **Install**.
 4.  Open the **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
 5.  Search for `Preferences: Color Theme` and select it.
-6.  Choose one of the `G3` themes from the list.
+6.  Choose one of the `Vexiun` themes from the list.
 
 ## For More Information
 

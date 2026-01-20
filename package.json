@@ -1,8 +1,8 @@
 {
-  "name": "themeg3",
-  "displayName": "Theme-G3",
-  "description": "Thme for vscode",
-  "version": "0.1.1",
+  "name": "vexiun-theme",
+  "displayName": "Vexiun theme",
+  "description": "Theme for vscode",
+  "version": "0.2.2",
   "engines": {
     "vscode": "^1.102.3"
   },
@@ -23,19 +23,49 @@
   "contributes": {
     "themes": [
       {
-        "label": "G3 Gray",
+        "label": "Gray",
         "uiTheme": "vs-dark",
-        "path": "./themes/g3-gray-color-theme.json"
+        "path": "./themes/gray-color-theme.json"
       },
       {
-        "label": "G3 zinc",
+        "label": "zinc",
         "uiTheme": "vs-dark",
-        "path": "./themes/g3-zinc-color-theme.json"
+        "path": "./themes/zinc-color-theme.json"
       },
       {
-        "label": "G3 Dark purple",
+        "label": "Dark purple",
         "uiTheme": "vs-dark",
-        "path": "./themes/g3-dark-purple-collor-theme.json"
+        "path": "./themes/dark-purple-collor-theme.json"
+      },
+      {
+        "label": "Sakura Light",
+        "uiTheme": "vs",
+        "path": "./themes/sakura-light-color-theme.json"
+      },
+      {
+        "label": "Strawberry dark",
+        "uiTheme": "vs",
+        "path": "./themes/dark-strawberry-collor-theme.json"
+      },
+      {
+        "label": "Black and White",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black-and-white-color-theme.json"
+      },
+      {
+        "label": "White and Black",
+        "uiTheme": "vs",
+        "path": "./themes/white-and-black-color-theme.json"
+      },
+      {
+        "label": "Vexiun Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vexiun-dark.json"
+      },
+      {
+        "label": "Vexiun Light",
+        "uiTheme": "vs",
+        "path": "./themes/vexiun-light.json"
       }
     ]
   }
