@@ -1,8 +1,8 @@
 {
   "name": "vexiun-theme",
   "displayName": "Vexiun theme",
-  "description": "Theme for vscode",
-  "version": "0.2.2",
+  "description": "Official Vexiun theme collection. 9 carefully crafted dark & light variants with minimalist design. Perfect for React, TypeScript, and Next.js developers.",
+  "version": "0.2.3",
   "engines": {
     "vscode": "^1.102.3"
   },
@@ -15,45 +15,60 @@
     "url": "https://github.com/ThalysonRibeiro/theme-G3"
   },
     "keywords": [
+    "vexiun",
     "dark",
-    "theme",
-    "purple"
-  ],
+    "light",
+    "purple",
+    "minimal",
+    "clean",
+    "modern",
+    "productivity",
+    "react",
+    "typescript",
+    "nextjs",
+    "monochrome",
+    "sakura"
+],
   "publisher": "Rafinha-g3",
+  "galleryBanner": {
+    "color": "#0a0a0a",
+    "theme": "dark"
+  },
+  "license": "MIT",
   "contributes": {
     "themes": [
       {
-        "label": "Gray",
+        "label": "Vexiun Gray",
         "uiTheme": "vs-dark",
         "path": "./themes/gray-color-theme.json"
       },
       {
-        "label": "zinc",
+        "label": "Vexiun Zinc",
         "uiTheme": "vs-dark",
         "path": "./themes/zinc-color-theme.json"
       },
       {
-        "label": "Dark purple",
+        "label": "Vexiun Purple",
         "uiTheme": "vs-dark",
         "path": "./themes/dark-purple-collor-theme.json"
       },
       {
-        "label": "Sakura Light",
+        "label": "Vexiun Sakura",
         "uiTheme": "vs",
         "path": "./themes/sakura-light-color-theme.json"
       },
       {
-        "label": "Strawberry dark",
+        "label": "Vexiun Strawberry",
         "uiTheme": "vs",
         "path": "./themes/dark-strawberry-collor-theme.json"
       },
       {
-        "label": "Black and White",
+        "label": "Vexiun Mono Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/black-and-white-color-theme.json"
       },
       {
-        "label": "White and Black",
+        "label": "Vexiun Mono Light",
         "uiTheme": "vs",
         "path": "./themes/white-and-black-color-theme.json"
       },
