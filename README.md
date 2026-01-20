@@ -4,31 +4,40 @@ This extension provides a collection of custom themes for Visual Studio Code.
 
 ## Available Themes
 
-### Gray
-![Gray Theme](./public/gray.png)
+### Vexiun Gray
 
-### Zinc
-![Zinc Theme](./public/zinc.png)
+![Vexiun Gray Theme](./public/gray.png)
 
-### Dark Purple
-![Dark Purple Theme](./public/dark-purple.png)
+### Vexiun Zinc
 
-### Sakura Light
-![Sakura Light Theme](./public/sakura.png)
+![Vexiun Zinc Theme](./public/zinc.png)
 
-### Strawberry Dark
-![Strawberry Dark Theme](./public/strawberry.png)
+### Vexiun Purple
 
-### Black and White
-![Black and White Theme](./public/black-end-white.png)
+![Vexiun Purple Theme](./public/dark-purple.png)
 
-### White and Black
-![White and Black Theme](./public/white-and-black.png)
+### Vexiun Sakura
+
+![Vexiun Sakura Theme](./public/sakura.png)
+
+### Vexiun Strawberry
+
+![Vexiun Strawberry Theme](./public/strawberry.png)
+
+### Vexiun Mono Dark
+
+![Vexiun Mono Dark Theme](./public/black-end-white.png)
+
+### Vexiun Mono Light
+
+![Vexiun Mono Light Theme](./public/white-and-black.png)
 
 ### Vexiun Dark
+
 (Image not available yet)
 
 ### Vexiun Light
+
 (Image not available yet)
 
 ## Installation
@@ -42,7 +51,7 @@ This extension provides a collection of custom themes for Visual Studio Code.
 
 ## For More Information
 
-*   [Visual Studio Code Themes](https://code.visualstudio.com/docs/getstarted/themes)
-*   [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- [Visual Studio Code Themes](https://code.visualstudio.com/docs/getstarted/themes)
+- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**

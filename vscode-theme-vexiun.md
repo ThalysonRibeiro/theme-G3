@@ -4,31 +4,40 @@ Paleta e temas de cores do VS Code baseados nas cores do projeto.
 
 ## Temas
 
-### Gray
-![Gray Theme](./public/gray.png)
+### Vexiun Gray
 
-### Zinc
-![Zinc Theme](./public/zinc.png)
+![Vexiun Gray Theme](./public/gray.png)
 
-### Dark Purple
-![Dark Purple Theme](./public/dark-purple.png)
+### Vexiun Zinc
 
-### Sakura Light
-![Sakura Light Theme](./public/sakura.png)
+![Vexiun Zinc Theme](./public/zinc.png)
 
-### Strawberry Dark
-![Strawberry Dark Theme](./public/strawberry.png)
+### Vexiun Purple
 
-### Black and White
-![Black and White Theme](./public/black-end-white.png)
+![Vexiun Purple Theme](./public/dark-purple.png)
 
-### White and Black
-![White and Black Theme](./public/white-and-black.png)
+### Vexiun Sakura
+
+![Vexiun Sakura Theme](./public/sakura.png)
+
+### Vexiun Strawberry
+
+![Vexiun Strawberry Theme](./public/strawberry.png)
+
+### Vexiun Mono Dark
+
+![Vexiun Mono Dark Theme](./public/black-end-white.png)
+
+### Vexiun Mono Light
+
+![Vexiun Mono Light Theme](./public/white-and-black.png)
 
 ### Vexiun Dark
+
 (Imagem ainda não disponível)
 
 ### Vexiun Light
+
 (Imagem ainda não disponível)
 
 ## Paleta Base
@@ -174,15 +183,42 @@ Paleta e temas de cores do VS Code baseados nas cores do projeto.
     "terminal.ansiBrightWhite": "#FFFFFF"
   },
   "tokenColors": [
-    { "scope": ["comment", "punctuation.definition.comment"], "settings": { "foreground": "#94A3B8", "fontStyle": "italic" } },
-    { "scope": ["string", "constant.character"], "settings": { "foreground": "#f1fa8c" } },
-    { "scope": ["keyword", "storage.type", "storage.modifier"], "settings": { "foreground": "#8B5CF6" } },
-    { "scope": ["entity.name.function", "support.function"], "settings": { "foreground": "#60A5FA" } },
-    { "scope": ["variable", "meta.definition.variable"], "settings": { "foreground": "#ffffff" } },
-    { "scope": ["constant.numeric", "constant.language.boolean"], "settings": { "foreground": "#F472B6" } },
-    { "scope": ["entity.name.type", "support.type", "support.class"], "settings": { "foreground": "#F59E0B" } },
-    { "scope": ["entity.name.tag", "meta.tag", "support.constant.dom"], "settings": { "foreground": "#38BDF8" } },
-    { "scope": ["invalid", "invalid.deprecated"], "settings": { "foreground": "#FFFFFF", "background": "#DC2626" } }
+    {
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": { "foreground": "#94A3B8", "fontStyle": "italic" }
+    },
+    {
+      "scope": ["string", "constant.character"],
+      "settings": { "foreground": "#f1fa8c" }
+    },
+    {
+      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "settings": { "foreground": "#8B5CF6" }
+    },
+    {
+      "scope": ["entity.name.function", "support.function"],
+      "settings": { "foreground": "#60A5FA" }
+    },
+    {
+      "scope": ["variable", "meta.definition.variable"],
+      "settings": { "foreground": "#ffffff" }
+    },
+    {
+      "scope": ["constant.numeric", "constant.language.boolean"],
+      "settings": { "foreground": "#F472B6" }
+    },
+    {
+      "scope": ["entity.name.type", "support.type", "support.class"],
+      "settings": { "foreground": "#F59E0B" }
+    },
+    {
+      "scope": ["entity.name.tag", "meta.tag", "support.constant.dom"],
+      "settings": { "foreground": "#38BDF8" }
+    },
+    {
+      "scope": ["invalid", "invalid.deprecated"],
+      "settings": { "foreground": "#FFFFFF", "background": "#DC2626" }
+    }
   ]
 }
 ```
@@ -262,15 +298,42 @@ Paleta e temas de cores do VS Code baseados nas cores do projeto.
     "terminal.ansiBrightWhite": "#FFFFFF"
   },
   "tokenColors": [
-    { "scope": ["comment", "punctuation.definition.comment"], "settings": { "foreground": "#64748B", "fontStyle": "italic" } },
-    { "scope": ["string", "constant.character"], "settings": { "foreground": "#22C55E" } },
-    { "scope": ["keyword", "storage.type", "storage.modifier"], "settings": { "foreground": "#4338CA" } },
-    { "scope": ["entity.name.function", "support.function"], "settings": { "foreground": "#2563EB" } },
-    { "scope": ["variable", "meta.definition.variable"], "settings": { "foreground": "#0F172A" } },
-    { "scope": ["constant.numeric", "constant.language.boolean"], "settings": { "foreground": "#DB2777" } },
-    { "scope": ["entity.name.type", "support.type", "support.class"], "settings": { "foreground": "#B45309" } },
-    { "scope": ["entity.name.tag", "meta.tag", "support.constant.dom"], "settings": { "foreground": "#0EA5E9" } },
-    { "scope": ["invalid", "invalid.deprecated"], "settings": { "foreground": "#FFFFFF", "background": "#DC2626" } }
+    {
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": { "foreground": "#64748B", "fontStyle": "italic" }
+    },
+    {
+      "scope": ["string", "constant.character"],
+      "settings": { "foreground": "#22C55E" }
+    },
+    {
+      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "settings": { "foreground": "#4338CA" }
+    },
+    {
+      "scope": ["entity.name.function", "support.function"],
+      "settings": { "foreground": "#2563EB" }
+    },
+    {
+      "scope": ["variable", "meta.definition.variable"],
+      "settings": { "foreground": "#0F172A" }
+    },
+    {
+      "scope": ["constant.numeric", "constant.language.boolean"],
+      "settings": { "foreground": "#DB2777" }
+    },
+    {
+      "scope": ["entity.name.type", "support.type", "support.class"],
+      "settings": { "foreground": "#B45309" }
+    },
+    {
+      "scope": ["entity.name.tag", "meta.tag", "support.constant.dom"],
+      "settings": { "foreground": "#0EA5E9" }
+    },
+    {
+      "scope": ["invalid", "invalid.deprecated"],
+      "settings": { "foreground": "#FFFFFF", "background": "#DC2626" }
+    }
   ]
 }
 ```
