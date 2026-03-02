@@ -35,7 +35,12 @@ jobs:
           curl -fsS https://marketplace.visualstudio.com/_apis/gallery || true
 
       - name: Publish to VS Code Marketplace
-        run: vsce publish -p ${{ secrets.VSCE_PAT }} --debug
+        run: |
+          # `vsce` doesn’t support a debug option, but we can
+          # increase verbosity with the npm log level environment
+          # variable.  If you have network problems, the curl step
+          # above will still help diagnose connectivity issues.
+          npm_config_loglevel=verbose vsce publish -p ${{ secrets.VSCE_PAT }}
 
       - name: Release
         uses: softprops/action-gh-release@v1

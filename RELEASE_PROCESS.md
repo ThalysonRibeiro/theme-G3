@@ -30,7 +30,7 @@ When you are ready to release a new version, perform these preparation steps on 
 
     ```bash
     git add package.json CHANGELOG.md
-    git commit -m "chore: Prepare release v1.0.3"
+    git commit -m "chore: Prepare release v1.0.4"
     ```
 
 4.  **Push to `develop`:**
@@ -70,14 +70,14 @@ This is the final step that triggers the automated publishing pipeline.
     ```
 
 3.  **Create and Push the Git Tag:**
-    Create a new Git tag that **matches the version in `package.json`**. Pushing this tag to GitHub will automatically start the release workflow.
+    Create a new Git tag that **matches the version in `package.json`**. Pushing this tag to GitHub will automatically start the release workflow, which now performs a connectivity check and runs `vsce` with a verbose log level.
 
     ```bash
-    # Create the tag (e.g., v1.0.3)
-    git tag v1.0.3
+    # Create the tag (e.g., v1.0.4)
+    git tag v1.0.4
 
     # Push the tag to GitHub
-    git push origin v1.0.3
+    git push origin v1.0.4
     ```
 
 ## Step 5: Verify the Release

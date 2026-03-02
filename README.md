@@ -8,7 +8,7 @@ Clean UI. Semantic precision. Visual clarity.
 
 ## Enable Full Semantic Highlighting (Recommended)
 
-Vexiun Theme 1.0.3 uses advanced **Semantic Token Colors** to deliver refined highlighting for TypeScript, React, and modern backends.
+Vexiun Theme 1.0.4 uses advanced **Semantic Token Colors** to deliver refined highlighting for TypeScript, React, and modern backends.
 
 To get the full experience, enable semantic highlighting:
 
