@@ -11,54 +11,61 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm install -g vsce
+        run: npm ci
 
       - name: Package extension
-        run: vsce package
+        run: npx @vscode/vsce@latest package
 
       - name: List files
-        run: ls -R
+        run: ls -la && ls -la *.vsix || true
 
-      - name: Check Marketplace connectivity
+      - name: Check Marketplace connectivity (best-effort)
         run: |
           echo "testing endpoint..."
-          # show details so we can see if the runner itself has trouble reaching
-          curl -v https://marketplace.visualstudio.com/_apis/gallery || true
+          curl -I -sS --max-time 20 https://marketplace.visualstudio.com/_apis/gallery || true
 
-      - name: Publish to VS Code Marketplace
+      - name: Publish to VS Code Marketplace (retry + backoff)
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+          npm_config_loglevel: verbose
         run: |
-          # `vsce` doesn’t support a debug option, but we can
-          # increase verbosity with the npm log level environment
-          # variable.  Wrap the publish command in a simple retry
-          # loop because the Marketplace occasionally times out.
-          npm_config_loglevel=verbose
-          attempts=3
+          set -euo pipefail
+
+          VSIX_PATH="$(ls -1 *.vsix | head -n 1)"
+          echo "Using VSIX: $VSIX_PATH"
+
+          attempts=8
           for i in $(seq 1 $attempts); do
-            if vsce publish -p ${{ secrets.VSCE_PAT }}; then
+            echo "Publish attempt $i/$attempts..."
+            if npx @vscode/vsce@latest publish -p "$VSCE_PAT" --packagePath "$VSIX_PATH"; then
               echo "publish succeeded on attempt $i"
-              break
+              exit 0
             fi
-            if [ $i -lt $attempts ]; then
-              echo "publish attempt $i failed, retrying in $((i*5))s..."
-              sleep $((i*5))
-            else
-              echo "all $attempts publish attempts failed"
-              exit 1
+
+            if [ "$i" -lt "$attempts" ]; then
+              sleep_seconds=$((i*i*10))   # 10, 40, 90, 160, 250...
+              echo "publish attempt $i failed, retrying in ${sleep_seconds}s..."
+              sleep "$sleep_seconds"
             fi
           done
 
+          echo "all $attempts publish attempts failed"
+          exit 1
+
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: "*.vsix"
