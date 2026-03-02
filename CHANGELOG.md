@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-03-01
+
+### Changed
+
+- Improved semantic highlighting for `gray-color-theme.json` and `dark-bloom-collor-theme.json`.
+- Refined Markdown heading colors (Blue, Magenta, Orange) for better hierarchy and readability.
+- Added italic styling for local variables and block variables in theme definitions.
+- Updated repository URL to the new location.
+
 ## [1.0.0] - 2026-02-28
 
 ### Added

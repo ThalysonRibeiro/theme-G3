@@ -230,13 +230,91 @@
 				"foreground": "#b443ff"
 			}
 		},
+	{
+  "name": "React Hooks (calls)",
+  "scope": [
+    "meta.function-call.tsx entity.name.function.tsx"
+  ],
+  "settings": { "fontStyle": "italic" }
+},
 		{
-			"name": "React Hooks",
-			"scope": "entity.name.function.tsx",
-			"settings": {
-				"fontStyle": "italic"
-			}
-		},
+    "name": "TS Decorators",
+    "scope": [
+      "meta.decorator.ts",
+      "meta.decorator.ts entity.name.function.ts",
+      "entity.name.function.decorator.ts"
+    ],
+    "settings": { "foreground": "#BD93F9" }
+  },
+
+  // Function call (and(), eq(), z.string()...)
+  {
+    "name": "TS Function Call",
+    "scope": [
+      "meta.function-call.ts entity.name.function.ts",
+      "meta.function-call.ts support.function",
+      "entity.name.function.ts"
+    ],
+    "settings": { "foreground": "#8BE9FD" }
+  },
+
+  // Function / Method declaration (createRole(), createOrUpdatePublicLink())
+  {
+    "name": "TS Function/Method Declaration",
+    "scope": [
+      "meta.function.ts entity.name.function.ts",
+      "meta.definition.method.ts entity.name.function.ts",
+      "meta.method.declaration.ts entity.name.function.ts",
+      "meta.function.declaration.ts entity.name.function.ts"
+    ],
+    "settings": { "foreground": "#50FA7B" }
+  },
+
+  // Class / Interface / Type names (CreateRoleDto, Workspace...)
+  {
+    "name": "TS Types (Class/Interface)",
+    "scope": [
+      "entity.name.type.class.ts",
+      "entity.name.type.interface.ts",
+      "entity.name.type.ts",
+      "support.type"
+    ],
+    "settings": { "foreground": "#8BE9FD" }
+  },
+
+  // Primitive types (string, boolean, number)
+  {
+    "name": "TS Primitive Types",
+    "scope": [
+      "support.type.primitive.ts",
+      "keyword.type.ts"
+    ],
+    "settings": { "foreground": "#8BE9FD" }
+  },
+  {
+    "name": "TS Parameters",
+    "scope": [
+      "variable.parameter.ts",
+      "meta.parameters.ts variable.parameter.ts"
+    ],
+    "settings": { "foreground": "#FFB86C" }
+  },
+  {
+    "name": "TS Properties",
+    "scope": [
+      "variable.other.property.ts",
+      "meta.member.expression.ts variable.other.property.ts"
+    ],
+    "settings": { "foreground": "#FFFFFF" }
+  },
+  {
+    "name": "TS Constants",
+    "scope": [
+      "variable.other.constant.ts",
+      "support.constant"
+    ],
+    "settings": { "foreground": "#BD93F9", "fontStyle": "italic" }
+  },
 		{
 			"name": "Block Level Variables",
 			"scope": [
@@ -523,11 +601,27 @@
   "settings": { "foreground": "#FFB86C" }
 },
 {
+  "name": "JSON Punctuation",
+  "scope": [
+    "source.json punctuation.separator.dictionary.key-value.json",
+    "source.json punctuation.definition.dictionary.begin.json",
+    "source.json punctuation.definition.dictionary.end.json",
+    "source.json punctuation.definition.array.begin.json",
+    "source.json punctuation.definition.array.end.json"
+  ],
+  "settings": { "foreground": "#6272A4" }
+},
+{
   "name": "JSON Booleans / Null",
   "scope": [
     "source.json constant.language.json"
   ],
   "settings": { "foreground": "#8BE9FD" }
+},
+{
+  "name": "MD fenced punctuation",
+  "scope": ["punctuation.definition.fenced.markdown"],
+  "settings": { "foreground": "#6272A4" }
 },
 {
     "name": "MD headings",
