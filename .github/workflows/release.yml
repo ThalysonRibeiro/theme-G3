@@ -29,8 +29,13 @@ jobs:
       - name: List files
         run: ls -R
 
+      - name: Check Marketplace connectivity
+        run: |
+          echo "testing endpoint..."
+          curl -fsS https://marketplace.visualstudio.com/_apis/gallery || true
+
       - name: Publish to VS Code Marketplace
-        run: vsce publish -p ${{ secrets.VSCE_PAT }}
+        run: vsce publish -p ${{ secrets.VSCE_PAT }} --debug
 
       - name: Release
         uses: softprops/action-gh-release@v1
