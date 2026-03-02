@@ -32,15 +32,30 @@ jobs:
       - name: Check Marketplace connectivity
         run: |
           echo "testing endpoint..."
-          curl -fsS https://marketplace.visualstudio.com/_apis/gallery || true
+          # show details so we can see if the runner itself has trouble reaching
+          curl -v https://marketplace.visualstudio.com/_apis/gallery || true
 
       - name: Publish to VS Code Marketplace
         run: |
           # `vsce` doesn’t support a debug option, but we can
           # increase verbosity with the npm log level environment
-          # variable.  If you have network problems, the curl step
-          # above will still help diagnose connectivity issues.
-          npm_config_loglevel=verbose vsce publish -p ${{ secrets.VSCE_PAT }}
+          # variable.  Wrap the publish command in a simple retry
+          # loop because the Marketplace occasionally times out.
+          npm_config_loglevel=verbose
+          attempts=3
+          for i in $(seq 1 $attempts); do
+            if vsce publish -p ${{ secrets.VSCE_PAT }}; then
+              echo "publish succeeded on attempt $i"
+              break
+            fi
+            if [ $i -lt $attempts ]; then
+              echo "publish attempt $i failed, retrying in $((i*5))s..."
+              sleep $((i*5))
+            else
+              echo "all $attempts publish attempts failed"
+              exit 1
+            fi
+          done
 
       - name: Release
         uses: softprops/action-gh-release@v1

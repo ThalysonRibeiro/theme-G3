@@ -30,7 +30,7 @@ When you are ready to release a new version, perform these preparation steps on 
 
     ```bash
     git add package.json CHANGELOG.md
-    git commit -m "chore: Prepare release v1.0.4"
+    git commit -m "chore: Prepare release v1.0.1"
     ```
 
 4.  **Push to `develop`:**
@@ -73,14 +73,17 @@ This is the final step that triggers the automated publishing pipeline.
     Create a new Git tag that **matches the version in `package.json`**. Pushing this tag to GitHub will automatically start the release workflow, which now performs a connectivity check and runs `vsce` with a verbose log level.
 
     ```bash
-    # Create the tag (e.g., v1.0.4)
-    git tag v1.0.4
+    # Create the tag (e.g., v1.0.1)
+    git tag v1.0.1
 
     # Push the tag to GitHub
-    git push origin v1.0.4
+    git push origin v1.0.1
     ```
 
 ## Step 5: Verify the Release
 
 - Go to the **Actions** tab in your GitHub repository to monitor the pipeline's progress.
+
+The workflow now performs a connectivity check and will retry the `vsce publish` step up to three times if the Marketplace endpoint times out. If all attempts fail you’ll see a failure message in the log. This behaviour helps work around occasional network hiccups on GitHub-hosted runners.
+
 - Once it succeeds, a new release will be created in the **Releases** section, and the new version will be published to the VS Code Marketplace.
