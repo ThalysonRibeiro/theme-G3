@@ -2,7 +2,7 @@
   "name": "vexiun-theme",
   "displayName": "Vexiun theme",
   "description": "Official Vexiun theme collection. Carefully crafted dark & light variants with semantic highlighting optimized for React, TypeScript, and Next.js. Clean. Minimal. Focused.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.102.3"
   },
